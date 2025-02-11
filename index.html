@@ -1,17 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanmoy Das</title>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/c4e937c9d9.js" crossorigin="anonymous"></script>
+    <!-- Tailwind CSS with DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        colorPrimary: '#ffff',
+                        colorSecondary: 'rgb(133, 135, 146)',
+                        bgPrimary: '#212529',
+                        bgSecondary: '#212529',
+                        bgTertiary: '#2a2c39',
+
+                    }
+
+                }
+            }
+        }
+    </script>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .poppins {
+            font-family: "poppins", serif;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>Hi, I'm Tanmoy Das</h1>
+<body class="poppins bg-bgSecondary text-white">
+    <header class="px-5 md:px-8 lg:px-[100px]">
+        <div class="navbar">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl">Tanmoy Das</a>
+            </div>
+            <div class="navbar-center hidden lg:flex text-colorSecondary">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="hover:bg-bgTertiary">Home</a></li>
+                    <li><a class="hover:bg-bgTertiary">Resume</a></li>
+                    <li><a class="hover:bg-bgTertiary">Projects</a></li>
+                    <li><a class="hover:bg-bgTertiary">Blogs</a></li>
+                    <li><a class="hover:bg-bgTertiary">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn rounded-3xl border bg-bgSecondary text-white border-gray-50 px-6">Hire Me</a>
+            </div>
+        </div>
     </header>
     <main>
+        <!-- Banner -->
+        <section class="px-6 md:px-8 gap-8 lg:px-[100px] flex flex-col md:flex-row">
+            <div class="flex flex-col items-start gap-4">
+                <h1 class="text-4xl">Hello! I'm</h1>
+                <h1 class="text-7xl">Tanmoy Das</h1>
+                <p class="text-colorSecondary">Automobile Engineer and Bloger</p>
+                <button class="btn bg-bgSecondary text-white rounded-3xl">Get Resume</button>
+                <div class="mt-6">
+                    <img src="" alt="">
+                    <p class="text-colorSecondary">Watch Video</p>
+                </div>
+            </div>
+            <div>
+                <img src="./asset/portrait-hero.webp" alt="">
+            </div>
+        </section>
 
     </main>
     <footer>
